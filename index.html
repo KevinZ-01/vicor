@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="MiniGPT-5: Interleaved Vision-and-Language Generation via Generative Vokens">
+        content="ViCor: Bridging Visual Understanding and Commonsense Reasoning with Large Language Models.">
   <meta name="keywords" content="Multimodal Generation, Interleaved Vision-and-Language Generation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MiniGPT-5: Interleaved Vision-and-Language Generation via Generative Vokens</title>
+  <title>ViCor: Bridging Visual Understanding and Commonsense Reasoning with Large Language Models.</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -39,6 +39,18 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <title>Title Size Change</title>
+    <style>
+        .publication-title {
+            font-size: 24px; /* Change to desired font size */
+        }
+        .title.is-1 {
+            font-size: 36px; /* Change to desired font size */
+        }
+        .title.is-2 {
+            font-size: 30px; /* Change to desired font size */
+        }
+    </style>
 </head>
 <body>
 
@@ -48,24 +60,31 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MiniGPT-5: Interleaved Vision-and-Language Generation via Generative Vokens</h1>
+          <h2 class="title is-1 publication-title">ViCor: Bridging Visual Understanding and Commonsense Reasoning with Large Language Models</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://kzzheng.github.io/">Kaizhi Zheng</a><sup>*</sup>,</span>
+                <a href="https://kevinz-01.github.io/" style="color:#f68946;font-weight:normal;">Kaiwen Zhou</a>,                
+            </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=kDzxOzUAAAAJ&hl=en">Xuehai He</a><sup>*</sup>,</span>
+              <a href="https://scholar.google.com/citations?hl=en&user=C6Wu8M0AAAAJ&view_op=list_works" style="color:#F2A900;font-weight:normal;">Kwonjoon Lee</a>,
+            </span>
             <span class="author-block">
-              <a href="https://eric-xw.github.io/">Xin Eric Wang</a>,</span>
+              <a href="https://scholar.google.com/citations?user=4LAT5WYAAAAJ&hl=en" style="color:#F2A900;font-weight:normal;">Teruhisa Misu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://eric-xw.github.io/" style="color:#f68946;font-weight:normal;">Xin Eric Wang</a>,
+            </span>  
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">University of California, Santa Cruz</span>
+            <span class="author-block"><b style="color:#f68946; font-weight:normal">&#x25B6 </b> University of California, Santa Cruz; </b></span>
+            <span class="author-block"><b style="color:#F2A900; font-weight:normal">&#x25B6 </b> Honda Research Institute; </span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2310.02239.pdf"
+                <a href="https://arxiv.org/pdf/2310.05872.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -74,7 +93,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2310.02239"
+                <a href="https://arxiv.org/abs/2310.05872"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -104,7 +123,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img id="teaser" width="150%" src="./static/images/teaser.png">
+      <img id="teaser" width="150%" src="./static/images/fig1.png">
       <h2 class="subtitle has-text-centered">
         <p style="font-family:Times New Roman"><b>Figure 1. MiniGPT-5 is a unified model for interleaved vision-and-language 
           comprehension and generation. Besides the original multimodal comprehension and text generation abilities, 
@@ -123,19 +142,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large Language Models (LLMs) have garnered significant attention for their advancements 
-            in natural language processing, demonstrating unparalleled prowess in text comprehension 
-            and generation. Yet, the simultaneous generation of images with coherent textual narratives 
-            remains an evolving frontier. In response, we introduce an innovative interleaved 
-            vision-and-language generation technique anchored by the concept of "generative vokens", 
-            acting as the bridge for harmonized image-text outputs. 
-            Our approach is characterized by a distinctive two-staged training strategy focusing on 
-            description-free multimodal generation, where the training requires no comprehensive 
-            descriptions of images. To bolster model integrity, classifier-free guidance is incorporated, 
-            enhancing the effectiveness of vokens on image generation. 
-            Our model, <b>MiniGPT-5</b>, exhibits substantial improvement over the baseline Divter model 
-            on the MMDialog dataset and consistently delivers superior or comparable multimodal outputs 
-            in human evaluations on the VIST dataset, highlighting its efficacy across diverse benchmarks.
+            In our work, we explore the synergistic capabilities of pre-trained vision-and-language models (VLMs) and large language models
+            (LLMs) for visual commonsense reasoning (VCR). We categorize the problem of VCR into visual commonsense understanding (VCU) and
+            visual commonsense inference (VCI). For VCU, which involves perceiving the literal visual content, pre-trained VLMs exhibit
+            strong cross-dataset generalization. On the other hand, in VCI, where the goal is to infer conclusions beyond image content, 
+            VLMs face difficulties. We find that a baseline where VLMs provide perception results (image captions) to LLMs leads to improved
+            performance on VCI. However, we identify a challenge with VLMs' passive perception, which often misses crucial context 
+            information, leading to incorrect or uncertain reasoning by LLMs. To mitigate this issue, we suggest a collaborative approach
+            where LLMs, when uncertain about their reasoning, actively direct VLMs to concentrate on and gather relevant visual elements to 
+            support potential commonsense inferences. In our method, named ViCor, pre-trained LLMs serve as problem classifiers to analyze
+            the problem category, VLM commanders to leverage VLMs differently based on the problem classification, and visual commonsense 
+            reasoners to answer the question. VLMs will perform visual recognition and understanding. We evaluate our framework on two VCR 
+            benchmark datasets and outperform all other methods that do not require in-domain supervised fine-tuning.
           </p>
         </div>
       </div>
@@ -162,7 +180,7 @@
                 <li>Text Generation Loss help model learn voken positions while Conditional Latent Denoising Loss guide the model to predicate appropriate features</li>
               </ul>
             </div>        
-            <img id="model" width="100%" src="./static/images/structure.png">
+            <img id="model" width="100%" src="./static/images/fig2.png">
             <h3 class="subtitle has-text-centered">
               <p style="font-family:Times New Roman"><b>Figure 2. MiniGPT-5 pipeline.</b></p>
             </h3>   
@@ -186,7 +204,7 @@
                 Qualitative examples from <b>MiniGPT-5</b> and baselines on the CC3M, VIST, and MMDialog datasets.  From the comparisons, we can find the <b>MiniGPT-5</b> and SD 2 have similar results on single-image generation. When we evaluate with multi-step multimodal prompts, <b>MiniGPT-5</b> can produce more coherent and high-quality images.
               </p>
             </div>        
-            <img id="model" width="100%" src="./static/images/compare-arxiv.png">
+            <img id="model" width="100%" src="./static/images/fig3.png">
             <h3 class="subtitle has-text-centered">
               <p style="font-family:Times New Roman"><b>Figure 3. Comparison with other baselines. </b></p>
             </h3>   
