@@ -153,8 +153,8 @@
     <div class="hero-body">
       <img id="teaser" width="150%" src="./static/images/fig1.png">
       <h2 class="subtitle has-text-centered">
-        <p style="font-family:Times New Roman"><b>Figure 1. In the real world, different visual questions require different levels of reasoning and visual understanding. 
-          Therefore, the model needs to reason what kind of visual understanding needs to be performed to answer the visual question. </b></p>
+        <p style="font-family:Times New Roman"><b>Figure 1. In the real world, different visual commonsense questions require different levels of reasoning and visual understanding. 
+          Therefore, the model should be able to reason what kind of visual understanding needs to be performed to answer the visual question. </b></p>
       </h2>
     </div>
   </div>
@@ -164,7 +164,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
-        <h2 class="title is-3"><img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Interleaved Vision-and-Language Generation via LLMs </h2> 
+        <h2 class="title is-3"><img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Active Visual Understanding and Commonsense Reasoning with LLMs </h2> 
       </div>
     </div>
 
@@ -172,14 +172,14 @@
           <div class="column is-six-fifths">
             <div class="content has-text-justified">
               <ul>
-                <li>We leverage the pretrained multimodal large language model (MiniGPT-4) and text-to-image generation model (Stable Diffusion 2.1) to create a unified multimodal generation pipeline. </li>
-                <li>We added vokens into LLM's vocabulary and align the voken features with stable diffusion conditional features.</li>
-                <li>Text Generation Loss help model learn voken positions while Conditional Latent Denoising Loss guide the model to predicate appropriate features</li>
+                <li>We design a framework where LVLMs serve for visual understanding, and LLMs serve for commonsense reasoning. </li>
+                <li>LLMs can call VLMs in different ways by analyzing the question type and the initial answer confidence.</li>
+                <li>LLMs can reason based on the question context and guide the VLMs to extract crucial visual information from the image.</li>
               </ul>
             </div>        
             <img id="model" width="100%" src="./static/images/fig2.png">
             <h3 class="subtitle has-text-centered">
-              <p style="font-family:Times New Roman"><b>Figure 2. MiniGPT-5 pipeline.</b></p>
+              <p style="font-family:Times New Roman"><b>Figure 2. ViCor pipeline.</b></p>
             </h3>   
 
 
@@ -191,19 +191,20 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
-        <h2 class="title is-3"><img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Qualitative Comparison</h2> 
+        <h2 class="title is-3"><img id="painting_icon" width="5%" src="https://cdn-icons-png.flaticon.com/512/5379/5379860.png"> Qualitative Examples</h2> 
       </div>
     </div>
         <div class="columns is-centered has-text-centered">
           <div class="column is-six-fifths">
             <div class="content has-text-justified">
               <p>
-                Qualitative examples from <b>MiniGPT-5</b> and baselines on the CC3M, VIST, and MMDialog datasets.  From the comparisons, we can find the <b>MiniGPT-5</b> and SD 2 have similar results on single-image generation. When we evaluate with multi-step multimodal prompts, <b>MiniGPT-5</b> can produce more coherent and high-quality images.
+                Qualitative examples from <b>MiniGPT-5</b> and baselines on the CC3M, VIST, and MMDialog datasets.  From the comparisons, we can find the <b>MiniGPT-5</b> and SD 2 have similar results on 
+                single-image generation. When we evaluate with multi-step multimodal prompts, <b>MiniGPT-5</b> can produce more coherent and high-quality images.
               </p>
             </div>        
             <img id="model" width="100%" src="./static/images/fig3.png">
             <h3 class="subtitle has-text-centered">
-              <p style="font-family:Times New Roman"><b>Figure 3. Comparison with other baselines. </b></p>
+              <p style="font-family:Times New Roman"><b>Figure 3. Qualitative examples. </b></p>
             </h3>   
         </div>
   </div>
